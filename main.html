@@ -8,6 +8,9 @@
     <!-- Daisy UI link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        
+    </style>
 </head>
 
 <body class="bg-slate-800">
@@ -37,7 +40,7 @@
                         <img class="w-8 mx-auto" src="./assets/icon.png" alt="">
                         <h3>Bonus</h3>
                     </div>
-                    <div class="box border p-4 text-center rounded-sm">
+                    <div  class="box border p-4 text-center rounded-sm ">
                         <img class="w-8 mx-auto" src="./assets/icon.png" alt="">
                         <h3>Transfer Money</h3>
                     </div>
@@ -45,14 +48,14 @@
                         <img class="w-8 mx-auto" src="./assets/icon.png" alt="">
                         <h3>Pay Bill</h3>
                     </div>
-                    <div class="box border p-4 text-center rounded-sm">
+                    <div  id="transaction" class="box border p-4 text-center rounded-sm cursor-pointer hover:bg-blue-200">
                         <img class="w-8 mx-auto" src="./assets/icon.png" alt="">
-                        <h3>Transictions</h3>
+                        <h3>Transactions History</h3>
                     </div>
                 </div>
 
                 <!-- Add money section -->
-                <section id="add-money-section" class="mt-4">
+                <section id="add-money-section" class="mt-4 ">
                     <h1 class="text-center font-bold text-2xl">Add Money Section</h1>
                     <div class="">
                         <div class="hero-content flex-col lg:flex-row-reverse">
@@ -73,10 +76,10 @@
                                             <label class="label">Amount</label>
                                             <input id="input-amount" type="text" class="input" placeholder="Amount"
                                                 required />
-                                                <label class="label">Pin</label>
-                                                <input id="input-pin" value="1234" type="text" class="input"
-                                                    placeholder="Type pin" required />
-                                                <div><a class="link link-hover">Forgot password?</a></div>
+                                            <label class="label">Pin</label>
+                                            <input id="input-pin" value="1234" type="text" class="input"
+                                                placeholder="Type pin" required />
+                                            <div><a class="link link-hover">Forgot password?</a></div>
                                             <button id="btn-add"
                                                 class="btn btn-neutral mt-4 bg-blue-600 border-none">Add-Money</button>
                                         </fieldset>
@@ -101,13 +104,13 @@
                                             <input id="input-number" value='01818954350' , type="number" class="input"
                                                 placeholder="Type Your Account" required />
                                             <label class="label">Amount</label>
-                                            <input id="input-amount" type="text" class="input" placeholder="Amount"
+                                            <input id="cash-out-amount" type="text" class="input" placeholder="Amount"
                                                 required />
-                                                <label class="label">Pin</label>
-                                                <input id="input-pin" value="1234" type="text" class="input"
-                                                    placeholder="Type pin" required />
-                                                <div><a class="link link-hover">Forgot password?</a></div>
-                                            <button id="btn-add"
+                                            <label class="label">Pin</label>
+                                            <input id="input-pin" value="1234" type="text" class="input"
+                                                placeholder="Type pin" required />
+                                            <div><a class="link link-hover">Forgot password?</a></div>
+                                            <button id="btn-cash-out"
                                                 class="btn btn-neutral mt-4 bg-blue-600 border-none">Cash-Out</button>
                                         </fieldset>
                                     </form>
@@ -116,12 +119,22 @@
                         </div>
                     </div>
                 </section>
+
+                <!-- transictions -->
+                <section id="transaction-section">
+                    <h1 class="text-3xl font-bold text-blue-400 text-center mt-4">Transaction History</h1>
+                    <div id="transactiion-container">
+
+                    </div>
+                </section>
             </section>
         </header>
     </section>
-    <script src="./script/add-money.js"></script>
+    <script src="./script/utilities.js"></script>
     <script src="./script/tooggle.js"></script>
+    <script src="./script/add-money.js"></script>
     <script src="./script/cash-out.js"></script>
+    <script src="./script/transaction.js"></script>
 </body>
 
 </html>

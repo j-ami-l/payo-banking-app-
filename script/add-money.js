@@ -1,18 +1,35 @@
 document.getElementById('btn-add')
     .addEventListener('click', function(event){
         event.preventDefault();
-        const amount = document.getElementById('input-amount').value 
-        const convertedAmount = parseFloat(amount);
-
-        const total = document.getElementById('total-amount').innerText
-        const convertTotal = parseFloat(total);
-
-        const pin = document.getElementById('input-pin').value
+        const amount = getInputValueById("input-amount")
+        const acount = getInputValueById("input-number")
+        const total = getInnerTextById("total-amount")
+        const pin = getInputValueById("input-pin");
+        if(pin === 1234){
+        const newamount = amount + total;
         
-        if(parseInt(pin) === 1234){
-        const newamount = convertedAmount + convertTotal;
+        UpdateInnerText("total-amount", newamount);
+        const s = new Date().toLocaleString();
+
+        const container = getElement("transactiion-container")
+
+        const p = document.createElement("p");
+        p.innerText = 
+        `
+        Added ${amount} TK from ${acount} account at ${s}
+        `
         
-        document.getElementById('total-amount').innerText = newamount;}
+
+        container.appendChild(p);
+
+        
+        
+    
+    
+    
+    }
         else alert("Invalid Pin")
         
     })
+
+   
