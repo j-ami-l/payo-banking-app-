@@ -5,6 +5,13 @@ document.getElementById('btn-add')
         const acount = getInputValueById("input-number")
         const total = getInnerTextById("total-amount")
         const pin = getInputValueById("input-pin");
+        if(amount < 0) {
+            alert("Eta kono kotha ??")
+            return;
+
+        }
+
+
         if(pin === 1234){
         const newamount = amount + total;
         
@@ -13,14 +20,23 @@ document.getElementById('btn-add')
 
         const container = getElement("transactiion-container")
 
-        const p = document.createElement("p");
-        p.innerText = 
-        `
-        Added ${amount} TK from ${acount} account at ${s}
+        // const p = document.createElement("p");
+        // p.innerText = 
+        // `
+        // Added ${amount} TK from ${acount} account at ${s}
+        // `
+
+        const div = document.createElement("div")
+        div.classList.add("bg-red-100","border", "rounded-md", "border-blue-400" , "m-4" , "p-4")
+        div.innerHTML = `
+        <h1 class= "text-center text-2xl font-bold">ADDED MONEY</h1>
+        <h3>Amount: ${amount}</h3>
+        <p>Account Number: ${acount}</p>
+        <p>Time: ${s}</p>
         `
         
 
-        container.appendChild(p);
+        container.appendChild(div);
 
         
         
