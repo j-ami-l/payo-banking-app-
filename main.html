@@ -16,7 +16,7 @@
             <nav class="flex justify-around items-center">
                 <img class="w-16" src="./assets/logo.png" alt="">
                 <div>
-                    <h1  class="text-3xl font-bold">$ <span id="total-amount">4500</span></h1>
+                    <h1 class="text-3xl font-bold">$ <span id="total-amount">4500</span></h1>
                     <p class="border rounded-md p-1">Available balance</p>
                 </div>
                 <button class="btn bg-blue-600 text-white">logout</button>
@@ -25,11 +25,11 @@
                 <h1 class="text-2xl font-bold mb-2 text-center">Welcome to Payoo!</h1>
                 <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore, ex?</p>
                 <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
-                    <div class="box cursor-pointer border p-4 text-center rounded-sm">
+                    <div id="add-money" class="box cursor-pointer border p-4 text-center rounded-sm hover:bg-blue-200">
                         <img class="w-8 mx-auto" src="./assets/icon.png" alt="">
                         <h3>Add money</h3>
                     </div>
-                    <div class="box border p-4 text-center rounded-sm">
+                    <div id="cash-out" class="box border p-4 text-center rounded-sm cursor-pointer hover:bg-blue-200">
                         <img class="w-8 mx-auto" src="./assets/icon.png" alt="">
                         <h3>Cash Out</h3>
                     </div>
@@ -52,8 +52,8 @@
                 </div>
 
                 <!-- Add money section -->
-                <section>
-                    <h1>Add Money Section</h1>
+                <section id="add-money-section" class="mt-4">
+                    <h1 class="text-center font-bold text-2xl">Add Money Section</h1>
                     <div class="">
                         <div class="hero-content flex-col lg:flex-row-reverse">
                             <div class="card  w-full max-w-sm shrink-0 ">
@@ -71,10 +71,44 @@
                                             <input id="input-number" value='01818954350' , type="number" class="input"
                                                 placeholder="Type Your Account" required />
                                             <label class="label">Amount</label>
-                                            <input id="input-amount"  type="text" class="input"
-                                                    placeholder="Amount" required />
+                                            <input id="input-amount" type="text" class="input" placeholder="Amount"
+                                                required />
+                                                <label class="label">Pin</label>
+                                                <input id="input-pin" value="1234" type="text" class="input"
+                                                    placeholder="Type pin" required />
+                                                <div><a class="link link-hover">Forgot password?</a></div>
                                             <button id="btn-add"
                                                 class="btn btn-neutral mt-4 bg-blue-600 border-none">Add-Money</button>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- Cash Out -->
+                <section id="cash-out-section" class="mt-4">
+                    <h1 class="text-center font-bold text-2xl">Cash Out</h1>
+                    <div class="">
+                        <div class="hero-content flex-col lg:flex-row-reverse">
+                            <div class="card  w-full max-w-sm shrink-0 ">
+                                <div class="card-body">
+                                    <form action="">
+                                        <fieldset class="fieldset">
+                                            <label class="label">Account Number</label>
+                                            <input id="input-number" value='01818954350' , type="number" class="input"
+                                                placeholder="Type Your Account" required />
+                                            <label class="label">Amount</label>
+                                            <input id="input-amount" type="text" class="input" placeholder="Amount"
+                                                required />
+                                                <label class="label">Pin</label>
+                                                <input id="input-pin" value="1234" type="text" class="input"
+                                                    placeholder="Type pin" required />
+                                                <div><a class="link link-hover">Forgot password?</a></div>
+                                            <button id="btn-add"
+                                                class="btn btn-neutral mt-4 bg-blue-600 border-none">Cash-Out</button>
                                         </fieldset>
                                     </form>
                                 </div>
@@ -86,6 +120,8 @@
         </header>
     </section>
     <script src="./script/add-money.js"></script>
+    <script src="./script/tooggle.js"></script>
+    <script src="./script/cash-out.js"></script>
 </body>
 
 </html>

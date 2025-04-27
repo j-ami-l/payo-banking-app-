@@ -7,8 +7,12 @@ document.getElementById('btn-add')
         const total = document.getElementById('total-amount').innerText
         const convertTotal = parseFloat(total);
 
+        const pin = document.getElementById('input-pin').value
+        
+        if(parseInt(pin) === 1234){
         const newamount = convertedAmount + convertTotal;
         
-        document.getElementById('total-amount').innerText = newamount;
+        document.getElementById('total-amount').innerText = newamount;}
+        else alert("Invalid Pin")
         
     })
